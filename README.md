@@ -9,7 +9,7 @@ There are three intended ways to use this repo:
 - From the root directory run *jupyter-notebook*
 2. Jupyter Notebook hosted (wip)
 - Paste the github url at <mybinder.org>, then the Dockerfile will be used to build and run on jupyter
-3. Perl Module (wip)
+3. Perl6 Module (wip)
 - zef install Math::Polygons
 
 # Synopsis
