@@ -10,7 +10,7 @@ There are three intended ways to use this repo:
 2. Jupyter Notebook hosted (wip)
 - Paste the github url at <mybinder.org>, then the Dockerfile will be used to build and run on jupyter
 3. Perl6 Module (wip)
-- zef install Math::Polygons
+- *zef install Math::Polygons*
 
 # Synopsis
 ```perl6
