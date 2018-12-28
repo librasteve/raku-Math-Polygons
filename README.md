@@ -7,9 +7,9 @@ There are three intended ways to consume this repo:
 - Clone this repo locally on your machine
 - Do the Quick Start here Brian Duggan perl6 jupyter-notebook at <https://github.com/bduggan/p6-jupyter-kernel>
 - From the root directory run *jupyter-notebook*
-2. Jupyter Notebook hosted (wip)    
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/p6steve/perl6-Math-Polygons/master)
+2. Jupyter Notebook hosted (wip)
 - Paste the github url at <mybinder.org>, then the Dockerfile will be used to build and run on jupyter
+- [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/p6steve/perl6-Math-Polygons/master)
 3. Perl6 Module (wip)
 - *zef install Math::Polygons*
 
