@@ -2,7 +2,7 @@
 Some perl6 polygon objects that draw using SVG - this is an alpha with the ultimate goal of proper inheritance of Parallelograms, Rhomboids, etc.
 
 # Instructions
-There are three intended ways to use this repo:
+There are three intended ways to consume this repo:
 1. Jupyter Notebook local
 - Clone this repo locally on your machine
 - Do the Quick Start here Brian Duggan perl6 jupyter-notebook at <https://github.com/bduggan/p6-jupyter-kernel>
