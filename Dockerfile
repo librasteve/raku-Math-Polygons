@@ -20,19 +20,16 @@ RUN apt-get update \
      && cd .. && rm -rf zef \
   && zef -v install https://github.com/bduggan/p6-jupyter-kernel.git@0.0.9 \
   && zef -v install SVG::Plot --force-test \
-
-  # looks like this is just for the eg files
+  ### looks like this is just for the eg files
   #&& git clone https://github.com/bduggan/p6-jupyter-kernel.git \
   #&& mv p6-jupyter-kernel/eg . && rm -rf p6-jupyter-kernel \
   && git clone https://github.com/p6steve/perl6-Math-Polygons \
   && mv perl6-Math-Polygons/* ${HOME} && rm -rf perl6-Math-Polygons \
-
-  # do the following for all in .
+  ### do the following for all in .
   #&& chown -R $NB_USER:$NB_GID eg \
   #&& fix-permissions eg \
   && chown -R $NB_UID ${HOME} \
   && fix-permissions ${HOME} \
-
   && jupyter-kernel.p6 --generate-config
 
 ENV PATH /usr/share/perl6/site/bin:$PATH
