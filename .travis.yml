@@ -1,7 +1,7 @@
 language: perl6
 env:
 perl6:
-  - 2018.10
+  - 2018.01
 before_install:
 install:
   - rakudobrew build zef
