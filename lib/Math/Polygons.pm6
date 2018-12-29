@@ -1,4 +1,6 @@
-use SVG::Drawing;
+unit module Math::Polygons:ver<0.0.1>:auth<Steve Roe (p6steve@furnival.net)>;
+
+use Math::Polygons::Drawing;
 
 class Triangle is Polygon is export {
     has Point $.apex is required;

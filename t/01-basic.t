@@ -5,6 +5,6 @@ use Test;
 
 plan 2;
 
-use-ok 'SVG::Drawing';
 use-ok 'Math::Polygons';
+use-ok 'Math::Polygons::Drawing';
 

@@ -4,8 +4,8 @@ use lib '../lib';
 use Test;
 plan 1;
 
-use SVG::Drawing;
 use Math::Polygons;
+use Math::Polygons::Drawing;
 
 my $tri1 = Triangle.new(stroke => "green", fill => "green", 
                 apex => Point.new(100, 50),
@@ -26,7 +26,7 @@ my $rect  = Rectangle.new(stroke => "brown", fill => "brown",
             );  
 
 my $tree = Group.new( elements => [ $tri1, $tri2, $tri3, $rect ] );
-my $drawing = SVG::Drawing.new( elements => $tree );
+my $drawing = Drawing.new( elements => $tree );
 #$drawing.serialize.say;
 
 my $svg-out = q:to/END/;

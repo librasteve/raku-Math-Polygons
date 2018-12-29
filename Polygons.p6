@@ -1,6 +1,8 @@
+#!/usr/bin/env perl6
+
 use lib './lib';
-use SVG::Drawing;
 use Math::Polygons;
+use Math::Polygons::Drawing;
 
 my $rectangle = Rectangle.new( 
     origin => Point.new(20, 20),
@@ -24,7 +26,7 @@ my $quadrilateral = Quadrilateral.new(
 my $apex = Point.new(x => 200, y => 160),
 my $triangle = Triangle.new( apex => $apex, side => 100 );
 
-my $drawing = SVG::Drawing.new( elements => [ 
+my $drawing = Drawing.new( elements => [ 
     $quadrilateral,
     $rectangle, 
     $square, 
