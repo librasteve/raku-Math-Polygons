@@ -2,5 +2,5 @@
 .precomp
 .lib/precomp
 .swp
-.ipynb
+.ipynb_checkpoints/*
 .log
