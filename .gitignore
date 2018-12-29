@@ -2,4 +2,5 @@
 .precomp
 .lib/precomp
 .swp
-.pynb_checkpoints
+.ipynb
+.log
