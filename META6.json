@@ -11,7 +11,9 @@
         "Math::Polygons" : "lib/Math/Polygons.pm6",
         "Math::Polygons::Drawing" : "lib/Math/Polygons/Drawing.pm6"
     },
-    "depends" : [ ],
+    "depends" : [
+        "SVG"
+     ],
     "build-depends" : [ ],
     "test-depends" : [ ],
     "resources" : [ ],
