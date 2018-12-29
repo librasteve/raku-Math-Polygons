@@ -1,0 +1,9 @@
+language: perl6
+env:
+perl6:
+  - 2018.10
+before_install:
+install:
+  - rakudobrew build zef
+  - travis_retry zef install --depsonly .
+sudo: false
