@@ -33,8 +33,8 @@ class Drawing is export {
     }
 
     class Point is export {
-        has Numeric $.x;
-        has Numeric $.y;
+        has $.x;
+        has $.y;
 
         multi method new($x, $y) {
             self.bless(:$x, :$y);

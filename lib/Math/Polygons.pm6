@@ -11,11 +11,11 @@ class Triangle is Polygon is export {
     }   
 
     method base-points() {
-        my $y = $!apex.y + self.get-height;
+        my $y = $!apex.y + self.height;
         (Point.new(:$y, x => $!apex.x - ( $!side / 2 )), Point.new(:$y, x => $!apex.x + ( $!side / 2 )));
     }   
 
-    method get-height(--> Num ) { 
+    method height(--> Num ) { 
         sqrt($!side**2 - ($!side/2)**2)
     }   
 }
