@@ -4,3 +4,4 @@
 .swp
 .ipynb_checkpoints/*
 .log
+.Dockerfile.swp
