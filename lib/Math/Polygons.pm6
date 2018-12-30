@@ -4,7 +4,7 @@ use Math::Polygons::Drawing;
 
 class Triangle is Polygon is export {
     has Point $.apex is required;
-    has Int   $.side is required;
+    has       $.side is required;
 
     method points() {
         ($!apex, |self.base-points);
@@ -13,6 +13,10 @@ class Triangle is Polygon is export {
     method base-points() {
         my $y = $!apex.y + self.height;
         (Point.new(:$y, x => $!apex.x - ( $!side / 2 )), Point.new(:$y, x => $!apex.x + ( $!side / 2 )));
+    }   
+
+    method height(--> Num ) { 
+        sqrt($!side**2 - ($!side/2)**2)
     }   
 
     method height(--> Num ) { 

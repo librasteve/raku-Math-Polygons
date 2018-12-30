@@ -26,6 +26,8 @@ my $quadrilateral = Quadrilateral.new(
 my $apex = Point.new(x => 200, y => 160),
 my $triangle = Triangle.new( apex => $apex, side => 100 );
 
+dd $quadrilateral.points;
+
 my $drawing = Drawing.new( elements => [ 
     $quadrilateral,
     $rectangle, 
