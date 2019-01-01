@@ -12,7 +12,7 @@
         "Math::Polygons::Drawing" : "lib/Math/Polygons/Drawing.pm6"
     },
     "depends" : [
-        "SVG"
+        "SVG","SVG::Plot"
      ],
     "build-depends" : [ ],
     "test-depends" : [ ],
