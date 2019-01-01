@@ -1,22 +1,33 @@
-unit module Math::Polygons:ver<0.0.1>:auth<Steve Roe (p6steve@furnival.net)>;
+unit module Math::Polygons:ver<0.0.2>:auth<Steve Roe (p6steve@furnival.net)>;
 
 use Math::Polygons::Drawing;
 
+#|only doing Isosceles Triangles for now
 class Triangle is Polygon is export {
     has Point $.apex is required;
-    has Int   $.side is required;
+    has       $.side is required;
 
     method points() {
         ($!apex, |self.base-points);
     }   
 
     method base-points() {
-        my $y = $!apex.y + self.get-height;
-        (Point.new(:$y, x => $!apex.x - ( $!side / 2 )), Point.new(:$y, x => $!apex.x + ( $!side / 2 )));
+        my $y = $!apex.y + self.height;
+        my \A = Point.new(:$y, x => $!apex.x - ( $!side / 2 ));
+        my \C = Point.new(:$y, x => $!apex.x + ( $!side / 2 ));
+        return( A, C );
     }   
 
-    method get-height(--> Num ) { 
+    method height() { 
         sqrt($!side**2 - ($!side/2)**2)
+    }   
+    
+    method base() { 
+        $!side 
+    }   
+
+    method area( ) { 
+        ( $.height * $.base ) / 2 
     }   
 }
 
@@ -26,16 +37,24 @@ class Quadrilateral is Polygon is export {
     multi method new( \A, \B, \C, \D ) {
         self.bless( points => ( A, B, C, D ) );
     }
-    method A { return "@!points[0]" };
-    method B { return "@!points[1]" };
-    method C { return "@!points[2]" };
-    method D { return "@!points[3]" };
+    method A { @!points[0] };
+    method B { @!points[1] };
+    method C { @!points[2] };
+    method D { @!points[3] };
+
+    method area( ) { 
+        warn "I am not smart enough to figure this out!"; 
+    }   
 }
 
 class Rectangle is Quadrilateral is export {
     has Point $.origin;
-    has Int $.width;
-    has Int $.height;
+    has       $.width;
+    has       $.height;
+    
+    method area() { 
+        $.height * $.width 
+    }   
 
     method serialize( --> Pair) {
         rect => [ x =>  $!origin.x, y => $!origin.y, width => $!width, height => $!height, |self.styles ];
@@ -44,7 +63,11 @@ class Rectangle is Quadrilateral is export {
 
 class Square is Rectangle is export {
     has Point $.origin;
-    has Int $.side;
+    has       $.side;
+
+    method area() { 
+        $.side ** 2 
+    }   
 
     method serialize( --> Pair) {
         rect => [ x =>  $!origin.x, y => $!origin.y, width => $!side, height => $!side, |self.styles ];

@@ -15,21 +15,26 @@ my $square = Square.new(
     side => 100 
 );
 
-my \A = Point.new(20, 260);
-my \B = Point.new(30, 160);
-my \C = Point.new(120, 145);
-my \D = Point.new(125, 250);
 my $quadrilateral = Quadrilateral.new(
-    A, B, C, D, 
+    Point.new(20, 260),
+    Point.new(30, 160),
+    Point.new(120, 145),
+    Point.new(125, 250),
 );
+my $q := $quadrilateral;
+say "Quad Points are: ({$q.A}), ({$q.B}), ({$q.C}), ({$q.D})";
 
 my $apex = Point.new(x => 200, y => 160),
 my $triangle = Triangle.new( apex => $apex, side => 100 );
 
 my $drawing = Drawing.new( elements => [ 
-    $quadrilateral,
     $rectangle, 
     $square, 
+    $quadrilateral,
     $triangle,
 ]);
 $drawing.serialize.say;
+
+say "Rectangle Area: {$rectangle.area}";
+say "Square Area:    {$square.area}";
+say "Triangle Area:  {$triangle.area}";

@@ -1,4 +1,4 @@
-unit module Math::Polygons::Drawing:ver<0.0.1>:auth<Steve Roe (p6steve@furnival.net)>;
+unit module Math::Polygons::Drawing:ver<0.0.2>:auth<Steve Roe (p6steve@furnival.net)>;
 
 use SVG;
 
@@ -33,8 +33,8 @@ class Drawing is export {
     }
 
     class Point is export {
-        has Numeric $.x;
-        has Numeric $.y;
+        has $.x;
+        has $.y;
 
         multi method new($x, $y) {
             self.bless(:$x, :$y);
