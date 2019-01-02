@@ -1,8 +1,6 @@
 unit module Math::Polygons:ver<0.0.1>:auth<Steve Roe (p6steve@furnival.net)>;
 
 use Math::Polygons::Drawing;
-use Physics::Measure;
-use Physics::Unit;
 
 #|only doing Isosceles Triangles for now
 class Triangle is Polygon is export {
