@@ -56,8 +56,9 @@ class Rectangle is Quadrilateral is export {
         $.height * $.width 
     }   
 
+    #|serialize Points as Real to strip any Physics::Measure container
     method serialize( --> Pair) {
-        rect => [ x =>  $!origin.x, y => $!origin.y, width => $!width, height => $!height, |self.styles ];
+        rect => [ x => $!origin.x.Real, y => $!origin.y.Real, width => $!width.Real, height => $!height.Real, |self.styles ];
     }
 }
 
@@ -69,7 +70,8 @@ class Square is Rectangle is export {
         $.side ** 2 
     }   
 
+    #|serialize Points as Real to strip any Physics::Measure container
     method serialize( --> Pair) {
-        rect => [ x =>  $!origin.x, y => $!origin.y, width => $!side, height => $!side, |self.styles ];
+        rect => [ x => $!origin.x.Real, y => $!origin.y.Real, width => $!side.Real, height => $!side.Real, |self.styles ];
     }
 }

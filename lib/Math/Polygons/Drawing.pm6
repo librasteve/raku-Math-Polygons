@@ -40,16 +40,25 @@ class Drawing is export {
             self.bless(:$x, :$y);
         }
 
+        #|Preserve e.g. Physics::Measure decorations for print & labels
         method Str( --> Str ) {
-            return "$!x, $!y";
+            return "{$!x.Real}, {$!y.Real}";
         }
+
+        #|Strip e.g. Physics::Measure decorations for rendering
+        method serial( --> Str ) {
+            return "{$!x.Real}, {$!y.Real}";
+        }
+
     }
 
     class Polygon does Element does Styled is export {
         has Point @.points;
 
         method serialize( --> Pair ) {
-            polygon => [ points => @.points.join(' '), |self.styles ];
+say @.points.serial.join(' ');
+#say @.points;
+            polygon => [ points => @.points.serial.join(' '), |self.styles ];
         }
     }
 
