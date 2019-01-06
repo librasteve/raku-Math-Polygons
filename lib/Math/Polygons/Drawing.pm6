@@ -42,7 +42,7 @@ class Drawing is export {
 
         #|Preserve e.g. Physics::Measure decorations for print & labels
         method Str( --> Str ) {
-            return "{$!x.Real}, {$!y.Real}";
+            return "$!x, $!y";
         }
 
         #|Strip e.g. Physics::Measure decorations for rendering
