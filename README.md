@@ -4,7 +4,7 @@ Some perl6 polygon objects that draw via SVG - an alpha with the plan to do inhe
 [![Build Status](https://travis-ci.org/p6steve/perl6-Math-Polygons.svg?branch=master)](https://travis-ci.org/p6steve/perl6-Math-Polygons)
 
 # Instructions
-There are three intended ways to consume this repo:
+There are three ways to consume this module:
 1. Jupyter Notebook local
 - Clone this repo locally on your machine
 - Do the Quick Start here Brian Duggan perl6 jupyter-notebook at <https://github.com/bduggan/p6-jupyter-kernel>
@@ -13,7 +13,7 @@ There are three intended ways to consume this repo:
 - Click this badge => [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/p6steve/perl6-Math-Polygons/master)
 - Go to /eg and click Polygons.ipynb, then Run
 - If not, go to <mybinder.org> and paste this url <https://github.com/p6steve/perl6-Math-Polygons>, then the ./Dockerfile will be used to (re)build and run on Jupyter at Binder
-3. Perl6 Module (wip)
+3. Perl6 Module
 - *zef install Math::Polygons*
 
 # Synopsis
