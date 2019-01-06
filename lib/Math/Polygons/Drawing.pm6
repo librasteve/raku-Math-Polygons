@@ -56,8 +56,6 @@ class Drawing is export {
         has Point @.points;
 
         method serialize( --> Pair ) {
-say @.points.serial.join(' ');
-#say @.points;
             polygon => [ points => @.points.serial.join(' '), |self.styles ];
         }
     }
