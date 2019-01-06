@@ -8,7 +8,7 @@ class Triangle is Polygon is export {
     has       $.side is required;
 
     method points() {
-        ($!apex, |self.base-points);
+        ($!apex.serial, |self.base-points.serial);
     }   
 
     method base-points() {

@@ -47,7 +47,7 @@ class Drawing is export {
 
         #|Strip e.g. Physics::Measure decorations for rendering
         method serial( --> Str ) {
-            return "{$!x.Real}, {$!y.Real}";
+            return "{$!x.Real},{$!y.Real}";
         }
 
     }
