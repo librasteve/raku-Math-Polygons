@@ -1,8 +1,6 @@
 #!/usr/bin/env perl6
-
 use lib '../lib';
 use Math::Polygons;
-use Math::Polygons::Drawing;
 
 my $rectangle = Rectangle.new( 
     origin => Point.new(20, 20),
@@ -28,13 +26,14 @@ my $apex = Point.new(x => 200, y => 160),
 my $triangle = Triangle.new( apex => $apex, side => 100 );
 
 my $drawing = Drawing.new( elements => [ 
+    $quadrilateral,
     $rectangle, 
     $square, 
-    $quadrilateral,
     $triangle,
 ]);
 $drawing.serialize.say;
 
-say "Rectangle Area: {$rectangle.area}";
-say "Square Area:    {$square.area}";
-say "Triangle Area:  {$triangle.area}";
+say "Quadrilateral Area: {$quadrilateral.area}";
+say "Rectangle Area:     {$rectangle.area}";
+say "Square Area:        {$square.area}";
+say "Triangle Area:      {$triangle.area}";

@@ -1,11 +1,9 @@
 #!/usr/bin/env perl6
-
 use lib '../lib';
 use Test;
 plan 1;
 
 use Math::Polygons;
-use Math::Polygons::Drawing;
 
 my $rectangle = Rectangle.new( 
     origin => Point.new(20, 20),
@@ -45,6 +43,7 @@ my $svg-out = q:to/END/;
 </svg>
 END
 
-#is $drawing.serialize, $svg-out, 'all square';
 ok $drawing.serialize.contains( 'svg' ), 'all square';
+
+#EOF
 

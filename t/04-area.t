@@ -1,11 +1,9 @@
 #!/usr/bin/env perl6
-
 use lib '../lib';
 use Test;
 plan 3;
 
 use Math::Polygons;
-use Math::Polygons::Drawing;
 
 my $rectangle = Rectangle.new( 
     origin => Point.new(20, 20),
@@ -33,4 +31,5 @@ is $rectangle.area, 9600, 'rectangle area ok';
 is $square.area, 10000, 'square area ok';
 is-approx $triangle.area, 4330.127018922193, 'triangle area ok';
 
+#EOF
 

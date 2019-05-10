@@ -3,8 +3,7 @@
 use lib '../lib';
 use Test;
 
-plan 2;
+plan 1;
 
 use-ok 'Math::Polygons';
-use-ok 'Math::Polygons::Drawing';
 
