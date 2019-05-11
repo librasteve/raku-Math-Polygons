@@ -2,7 +2,6 @@
 
 use lib '../lib';
 use Math::Polygons;
-use Math::Polygons::Drawing;
 
 my $tri1 = Triangle.new(stroke => "green", fill => "green", 
                 apex => Point.new(100, 50),
