@@ -1,5 +1,5 @@
 {
-    "perl" : "6.c",
+    "perl" : "6.d",
     "name" : "Math::Polygons",
     "auth" : "github:p6steve",
     "api" : "1",
