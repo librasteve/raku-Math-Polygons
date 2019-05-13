@@ -61,4 +61,4 @@ $drawing.serialize.say;
 
 # Inspired by
 * Brian Duggan's perl6 jupyter-notebook at <https://github.com/bduggan/p6-jupyter-kernel>
-* Christopher Stowe's perl6 advent calendar [Christmas Tree](https://perl6advent.wordpress.com/2018/12/18/day-18-an-svg-christmas-tree/)
+* Jonathan Stowe's perl6 advent calendar [Christmas Tree](https://perl6advent.wordpress.com/2018/12/18/day-18-an-svg-christmas-tree/)
