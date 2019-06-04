@@ -11,7 +11,7 @@ ENV HOME /home/${NB_USER}
 
 RUN apt-get update \
   && apt-get install -y build-essential \
-  && git clone https://github.com/rakudo/rakudo.git -b 2017.12 \
+  && git clone https://github.com/rakudo/rakudo.git -b 2019.03.1 \
   && cd rakudo && perl Configure.pl --prefix=/usr --gen-moar --gen-nqp --backends=moar \
   && make && make install && cd .. && rm -rf rakudo \
   && export PATH=$PATH:/usr/share/perl6/site/bin \
