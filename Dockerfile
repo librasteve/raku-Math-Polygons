@@ -1,7 +1,7 @@
 FROM jupyter/all-spark-notebook:033056e6d164
 
 # last update: Sat Dec 29 13:50:00 EST 2018
-# p6steve 0.0.1 
+# p6steve 0.0.4
 
 USER root
 
@@ -11,7 +11,7 @@ ENV HOME /home/${NB_USER}
 
 RUN apt-get update \
   && apt-get install -y build-essential \
-  && git clone https://github.com/rakudo/rakudo.git -b 2019.03.1 \
+  && git clone https://github.com/rakudo/rakudo.git -b 2017.12 \
   && cd rakudo && perl Configure.pl --prefix=/usr --gen-moar --gen-nqp --backends=moar \
   && make && make install && cd .. && rm -rf rakudo \
   && export PATH=$PATH:/usr/share/perl6/site/bin \
