@@ -8,7 +8,7 @@
     "authors" : [ "p6steve" ],
     "license" : "Artistic-2.0",
     "provides" : {
-        "Math::Polygons" : "lib/Math/Polygons.pm6"
+        "Math::Polygons" : "lib/Math/Polygons.rakumod"
     },
     "depends" : [
         "SVG","SVG::Plot"
