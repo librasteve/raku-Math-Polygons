@@ -1,4 +1,4 @@
-unit module Math::Polygons:ver<0.0.4>:auth<Steve Roe (p6steve@furnival.net)>;
+unit module Math::Polygons:ver<0.0.5>:auth<Steve Roe (p6steve@furnival.net)>;
 use SVG;
 
 role Element is export {
