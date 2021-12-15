@@ -3,7 +3,7 @@
     "name" : "Math::Polygons",
     "auth" : "zef:p6steve",
     "api" : "1",
-    "version" : "0.0.4",
+    "version" : "0.0.5",
     "description" : "Some perl6 polygon objects that draw using SVG.",
     "authors" : [ "p6steve" ],
     "license" : "Artistic-2.0",
@@ -19,5 +19,5 @@
     "tags": [
       "Math", "Polygons", "Geometry", "SVG"
     ],
-    "source-url" : "git://github.com/p6steve/perl6-Math-Polygons.git"
+    "source-url" : "git://github.com/p6steve/raku-Math-Polygons.git"
 }
