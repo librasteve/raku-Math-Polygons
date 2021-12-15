@@ -1,11 +1,11 @@
-language: perl6
-env:
-perl6:
-  - 2019.03.1
-before_install:
+language:
+  - minimal
+
+services:
+  - docker
+
 install:
-  - rakudobrew build zef
-  - zef -v install SVG
-  - zef -v install SVG::Plot
-  - travis_retry zef install --depsonly .
-sudo: false
+  - docker pull jjmerelo/raku-test
+  - docker images
+
+script: travis_wait docker run -t -v  $TRAVIS_BUILD_DIR:/test jjmerelo/raku-test
