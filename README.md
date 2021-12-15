@@ -1,4 +1,4 @@
-# perl6-Math-Polygons
+# raku-Math-Polygons
 Some perl6 polygon objects that draw via SVG - an alpha with the plan to do inheritance of Parallelograms, Rhomboids, etc.
 
 [![Build Status](https://travis-ci.org/p6steve/perl6-Math-Polygons.svg?branch=master)](https://travis-ci.org/p6steve/perl6-Math-Polygons)
