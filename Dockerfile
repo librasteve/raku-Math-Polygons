@@ -30,7 +30,7 @@ RUN apt-get update \
 
 RUN zef install -v Math::Polygons \ 
     && git clone https://github.com/p6steve/raku-Math-Polygons.git \
-    && cp -R raku-Math-Polygons/eg /
+    && cp -R raku-Math-Polygons/eg ${HOME}
 
 ENV TINI_VERSION v0.18.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /usr/bin/tini
@@ -40,7 +40,7 @@ ENTRYPOINT ["/usr/bin/tini", "--"]
 
 
 #For enabling binder..........................
-COPY ./raku-notebooks/ ${HOME}
+#COPY ./raku-notebooks/ ${HOME}
 
 USER root
 RUN chown -R ${NB_UID} ${HOME}
@@ -50,4 +50,4 @@ WORKDIR ${HOME}
 
 EXPOSE 8888
 
-CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
+#CMD ["jupyter", "notebook", "--port=8888", "--no-browser", "--ip=0.0.0.0", "--allow-root"]
