@@ -64,6 +64,7 @@ class Polygon does Element does Styled is export {
 class Triangle is Polygon is export {
     has Point $.apex is required;
     has       $.side is required;
+    has       $.inverted;
 
     method points() {
         ($!apex, |self.base-points)
@@ -74,8 +75,9 @@ class Triangle is Polygon is export {
         my \C = Point.new(:$y, x => $!apex.x + ( $!side / 2 ));
         return( A, C );
     }   
-    method height() { 
-        sqrt($!side**2 - ($!side/2)**2)
+    method height() {
+        my $sign = $inverted ?? -1 !! +1;
+        $sign * sqrt($!side**2 - ($!side/2)**2)
     }   
     method base() { 
         $!side 
