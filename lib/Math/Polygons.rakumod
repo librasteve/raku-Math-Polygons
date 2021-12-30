@@ -76,7 +76,7 @@ class Triangle is Polygon is export {
         return( A, C );
     }   
     method height() {
-        my $sign = $inverted ?? -1 !! +1;
+        my $sign = $!inverted ?? -1 !! +1;
         $sign * sqrt($!side**2 - ($!side/2)**2)
     }   
     method base() { 
@@ -122,12 +122,30 @@ class Square is Rectangle is export {
     has       $.side;
 
     method serialize( --> Pair ) { 
-        rect => [ x => $!origin.x.Real, y=> $!origin.y.Real,   \
+        rect => [ x => $!origin.x.Real, y => $!origin.y.Real,   \
                     width => $!side.Real, height => $!side.Real, |self.styles ];
     }   
     method area() { 
         $.side ** 2 
     }   
+}
+
+class Circle does Element does Styled is export {
+    has Point $.centre;
+    has       $.radius;
+
+
+#    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+#            <circle cx="50" cy="50" r="50"/>
+#</svg>
+
+#    method serialize( --> Pair ) {
+#        polygon => [ points => @.points.map( -> $p { $p.serialize } ).join(' '), |self.styles ];
+#    }
+
+    method serialize( --> Pair ) {
+        circle => [ cx => $!centre.x.Real, cy => $!centre.y.Real, r => $!radius.Real, |self.styles ];
+    }
 }
 
 #EOF
