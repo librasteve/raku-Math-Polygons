@@ -19,7 +19,6 @@ There are three ways to consume this module:
 
 # Synopsis
 ```perl6
-use SVG::Drawing;
 use Math::Polygons;
 
 my $rectangle = Rectangle.new( 
@@ -48,7 +47,7 @@ my $triangle = Triangle.new(
     side => 100 
 );
 
-my $drawing = SVG::Drawing.new( 
+my $drawing = Drawing.new( 
     elements => [ 
         $rectangle, 
         $square,
