@@ -1,7 +1,7 @@
 # raku-Math-Polygons
 Some polygon objects that draw via SVG - an alpha with the potential to do inheritance of Parallelograms, Rhomboids, etc.
 
-![Build Status](https://github.com/p6stevereaku-math-polygons/actions/workflows/action.yml/badge.svg)
+![Build Status](https://github.com/p6steve/raku-math-polygons/actions/workflows/action.yml/badge.svg)
 
 # Instructions
 There are three ways to consume this module:
