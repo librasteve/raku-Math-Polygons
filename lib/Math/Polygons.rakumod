@@ -12,8 +12,8 @@ role Styled is export {
     has Int $.stroke-width = 3;
 
     method styles() {
-        ( stroke => $!stroke, stroke-width => $!stroke-width, 
-                                fill => $!fill ).grep( { .value.defined } );
+        (:$!stroke, stroke-width => $!stroke-width,
+         fill => $!fill ).grep( { .value.defined } );
     }   
 }   
 
