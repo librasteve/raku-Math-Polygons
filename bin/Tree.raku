@@ -25,3 +25,4 @@ my $tree = Group.new( elements => [ $tri1, $tri2, $tri3, $rect ] );
 my $drawing = Drawing.new( elements => $tree );
 $drawing.serialize.say;
 
+

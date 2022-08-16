@@ -12,7 +12,9 @@
     "SVG::Plot"
   ],
   "build-depends": [],
-  "test-depends": [],
+  "test-depends": [
+    "Test::META"
+  ],
   "provides": {
     "Math::Polygons": "lib/Math/Polygons.rakumod"
   },
