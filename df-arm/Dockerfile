@@ -1,7 +1,7 @@
-FROM p6steve/rakudo:notebook-arm64-2021.05
+FROM librasteve/rakudo:notebook-arm64-2021.05
     
 RUN zef install -v Math::Polygons \ 
-    && git clone https://github.com/p6steve/raku-Math-Polygons.git \
+    && git clone https://github.com/librasteve/raku-Math-Polygons.git \
     && cp -R raku-Math-Polygons/eg /
 
 ENTRYPOINT ["/bin/bash"]

@@ -25,7 +25,7 @@ my $quadrilateral = Quadrilateral.new(
 );
 
 my $apex = Point.new(x => 200, y => 160);
-my $triangle = Triangle.new( apex => $apex, side => 100 );
+my $triangle = Triangle.new(:$apex, side => 100 );
 
 is $rectangle.area, 9600, 'rectangle area ok';
 is $square.area, 10000, 'square area ok';

@@ -1,4 +1,4 @@
-unit module Math::Polygons:ver<0.0.5>:auth<Steve Roe (p6steve@furnival.net)>;
+unit module Math::Polygons:ver<0.0.5>:auth<Steve Roe (librasteve@furnival.net)>;
 use SVG;
 
 role Element is export {
@@ -12,8 +12,8 @@ role Styled is export {
     has Int $.stroke-width = 3;
 
     method styles() {
-        (:$!stroke, stroke-width => $!stroke-width,
-         fill => $!fill ).grep( { .value.defined } );
+        (:$!stroke, :$!stroke-width,
+         :$!fill).grep( { .value.defined } );
     }   
 }   
 
@@ -24,7 +24,7 @@ class Drawing is export {
     has Int $.height = 768;
 
     method dimensions() {
-        ( height => $!height, width => $!width ).grep( { .value.defined } );
+        (:$!height, :$!width).grep( { .value.defined } );
     }
     method serialize( --> Str ) {
         SVG.serialize(svg =>  [ |self.dimensions, |@!elements.map(-> $e { $e.serialize })]);
@@ -135,7 +135,7 @@ class Circle does Element does Styled is export {
     has       $.radius;
 
 
-#    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+#    <svg viewBox="0 0 100 100" xmins="http://www.w3.org/2000/svg">
 #            <circle cx="50" cy="50" r="50"/>
 #</svg>
 

@@ -4,9 +4,9 @@
   "version": "0.0.5",
   "perl": "6.d",
   "authors": [
-    "p6steve"
+    "librasteve"
   ],
-  "auth": "zef:p6steve",
+  "auth": "zef:librasteve",
   "depends": [
     "SVG",
     "SVG::Plot"
@@ -27,5 +27,5 @@
     "SVG"
   ],
   "api": "1",
-  "source-url": "git://github.com/p6steve/raku-Math-Polygons.git"
+  "source-url": "git://github.com/librasteve/raku-Math-Polygons.git"
 }
